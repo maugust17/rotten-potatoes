@@ -38,6 +38,7 @@ jobs:
           tags:
             allwenn/rotten-potatoes:latest
             allwenn/rotten-potatoes:${{ github.run_number }}
+            
   CD:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -57,6 +58,7 @@ jobs:
           manifests:
             k8s/mongodb/deployment.yaml
             k8s/mongodb/service.yaml
+            
       - name: Deploy Web
         uses: Azure/k8s-deploy@v1
         with:
