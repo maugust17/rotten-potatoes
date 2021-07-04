@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: movies
-          image: allwenn/rotten-potatoes:v1
+          image: allwenn/rotten-potatoes
           ports:
             - containerPort: 5000
           env:
