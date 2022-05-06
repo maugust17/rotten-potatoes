@@ -14,6 +14,7 @@ node {
     stage("Deploy"){
     
         echo 'I execute elsewhere'
+        sh 'kubectl cluster-info''
         sh 'kubectl apply -f  ./k8s/mongodb/deployment.yaml'
         sh 'kubectl apply -f  ./k8s/web/deployment.yaml'
     }
