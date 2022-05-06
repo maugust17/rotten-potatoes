@@ -12,7 +12,8 @@ node {
         }
     }
     stage("Deploy"){
-    
+        checkout scm
+
         echo 'I execute elsewhere'
         
         sh 'kubectl apply -f ./k8s/mongodb/deployment.yaml'
