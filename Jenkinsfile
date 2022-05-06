@@ -14,7 +14,7 @@ node {
     stage("Deploy"){
     
         echo 'I execute elsewhere'
-        sh 'k3d --version'
-        sh 'ls -l'
+        sh 'kubectl apply -f  ./k8s/mongodb/deployment.yaml'
+        sh 'kubectl apply -f  ./k8s/web/deployment.yaml'
     }
 }
