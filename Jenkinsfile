@@ -15,5 +15,6 @@ node {
     
         echo 'I execute elsewhere'
         sh 'k3d --version'
+        sh 'ls -l'
     }
 }
