@@ -39,7 +39,7 @@ spec:
   selector:
     app: movies
   ports:
-  - port: 80
+  - port: 9095
     targetPort: 5000
     nodePort: 30000
   type: LoadBalancer
