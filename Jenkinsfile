@@ -13,7 +13,7 @@ node {
     }
     stage("Deploy"){
         
-        withKubeConfig([credentialsId: 'credentials-id-k8s', serverUrl: 'https://0.0.0.0:33037']) {
+        withKubeConfig([credentialsId: 'credentials-id-k8s', serverUrl: 'https://127.0.0.1:1102']) {
             sh 'kubectl apply -f ./k8s/mongodb/deployment.yaml'
             sh 'kubectl apply -f ./k8s/web/deployment.yaml'
         }
