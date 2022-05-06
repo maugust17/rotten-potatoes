@@ -12,11 +12,11 @@ node {
         }
     }
     stage("Deploy"){
-        checkout scm
-
-        echo 'I execute elsewhere'
-        sh 'ls -l'
-        sh 'kubectl apply -f ./k8s/mongodb/deployment.yaml'
-        sh 'kubectl apply -f ./k8s/web/deployment.yaml'
+        
+        withKubeConfig([credentialsId: 'credentials-id-k8s', serverUrl: 'https://0.0.0.0:33037']) {
+            sh 'kubectl apply -f ./k8s/mongodb/deployment.yaml'
+            sh 'kubectl apply -f ./k8s/web/deployment.yaml'
+        }
+        
     }
 }
