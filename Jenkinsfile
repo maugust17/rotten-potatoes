@@ -14,5 +14,6 @@ node {
     stage("Deploy"){
     
         echo 'I execute elsewhere'
+        sh 'k3d --version'
     }
 }
