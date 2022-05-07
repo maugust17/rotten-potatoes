@@ -11,6 +11,12 @@ node {
             customImage.push("latest")
         }
     }
-    
+    stage("Test"){
+        sh 'Ejecuto Test'
+    }
+    stage("Deploy"){
+        sh 'Ejecuto Deploy'
+        
+    }
     
 }
