@@ -16,8 +16,8 @@ node {
         checkout scm
         kubernetes {
              
-             yamlFile '/k8s/mongodb/deloyment.yaml'
-             yamlFile '/k8s/web/deloyment.yaml'
+             yamlFile '/k8s/mongodb/deployment.yaml'
+             yamlFile '/k8s/web/deployment.yaml'
         }     
     }
 }
