@@ -13,14 +13,11 @@ node {
         }
     }
     stage("Deploy"){
-        agent{ 
-         kubernetes {
-             checkout scm
+        checkout scm
+        kubernetes {
+             
              yamlFile '/k8s/mongodb/deloyment.yaml'
              yamlFile '/k8s/web/deloyment.yaml'
-            }
-        }
-            
+        }     
     }
-    
 }
