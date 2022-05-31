@@ -1,5 +1,5 @@
 node {
-    agent any
+    
     stage("Build"){
         checkout scm
 
