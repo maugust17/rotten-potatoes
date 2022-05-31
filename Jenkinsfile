@@ -15,8 +15,8 @@ node {
         sh 'Ejecuto Test'
     }
     stage("Deploy"){
-        sh 'Ejecuto Deploy'
-        
+        kubernetesDeploy(configs: "/k8s/mongodb/deloyment.yaml", kubeconfigId: "mykubeconfig")
+        kubernetesDeploy(configs: "/k8s/mongodb/deloyment.yaml", kubeconfigId: "mykubeconfig")
     }
     
 }
