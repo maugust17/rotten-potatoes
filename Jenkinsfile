@@ -13,8 +13,10 @@ node {
         }
     }
     stage("Deploy"){
-        kubernetesDeploy(configs: "/k8s/mongodb/deloyment.yaml", kubeconfigId: "mykubeconfig")
-        kubernetesDeploy(configs: "/k8s/mongodb/deloyment.yaml", kubeconfigId: "mykubeconfig")
+         kubernetes {
+             yamlFile '/k8s/mongodb/deloyment.yaml'
+             yamlFile '/k8s/web/deloyment.yaml'
+            }
     }
     
 }
