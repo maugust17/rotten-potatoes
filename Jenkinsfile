@@ -13,7 +13,9 @@ node {
         }
     }
     stage("Deploy"){
+        
          kubernetes {
+             checkout scm
              yamlFile '/k8s/mongodb/deloyment.yaml'
              yamlFile '/k8s/web/deloyment.yaml'
             }
