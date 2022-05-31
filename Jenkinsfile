@@ -12,9 +12,6 @@ node {
             customImage.push("latest")
         }
     }
-    stage("Test"){
-        sh 'Ejecuto Test'
-    }
     stage("Deploy"){
         kubernetesDeploy(configs: "/k8s/mongodb/deloyment.yaml", kubeconfigId: "mykubeconfig")
         kubernetesDeploy(configs: "/k8s/mongodb/deloyment.yaml", kubeconfigId: "mykubeconfig")
