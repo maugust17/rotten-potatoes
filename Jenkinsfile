@@ -1,7 +1,7 @@
 node {
     
     stage("Build"){
-        checkout scm
+        
 
         docker.withRegistry('https://registry.hub.docker.com/', 'credentials-id') {
 
@@ -13,7 +13,7 @@ node {
         }
     }
     stage("Deploy"){
-        checkout scm
+        
         kubernetes {
              
              yamlFile '/k8s/mongodb/deployment.yaml'
