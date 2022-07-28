@@ -3,7 +3,7 @@ node {
     stage("Build"){
         
 
-        docker.withRegistry('https://registry.hub.docker.com/', 'credentials-id') {
+        docker.withRegistry('https://registry.hub.docker.com/', 'DockerHub') {
 
             def customImage = docker.build("allwenn/rotten-potatoes:${env.BUILD_ID}","./src")
 
