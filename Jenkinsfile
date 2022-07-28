@@ -1,34 +1,18 @@
 pipeline {
-  agent {
-    kubernetes {
-      yaml '''
-        spec:
-        containers:
-        - name: golang
-            image: golang:1.16.5
-            command:
-            - sleep
-            args:
-            - 99d
-        '''
-    }
-  }
+  agent any
   stages {
-    stage('Run maven') {
-        agent {
-            kubernetes {
-                yaml '''
-                    spec:
-                    containers:
-                    - name: maven
-                      image: maven:3.8.1-jdk-8
-                      command:
-                      - sleep
-                      args:
-                      - 99d
-                    '''
-            }
+    
+    stage('Deploy App to Kubernetes') {     
+      steps {
+        container('kubectl') {
+          withCredentials([file(credentialsId: 'kubernetesLocal', variable: 'KUBECONFIG')]) {
+            sh 'sed -i "s/<TAG>/${BUILD_NUMBER}/" /k8s/web/deployment.yaml'
+            sh 'kubectl apply -f /k8s/web/deployment.yaml'
+          }
         }
+      }
+    }
+   
       steps {
         sh 'echo Hola Mundo'
       }
