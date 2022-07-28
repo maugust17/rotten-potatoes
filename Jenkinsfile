@@ -1,7 +1,6 @@
 pipeline {
   agent any
   stages {
-    
     stage('Deploy App to Kubernetes') {     
       steps {
         container('kubectl') {
@@ -10,9 +9,7 @@ pipeline {
           }
         }
       }
-    }
-   
-      steps {
+	  steps {
         sh 'echo Hola Mundo'
       }
     }
