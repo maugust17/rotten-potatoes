@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Deploy App to Kubernetes') {     
       steps {
-        sh 'kubectl version'
+        sh 'kubectl apply -f /k8s/mongodb/deployment.yaml'
       }
     }
   }
