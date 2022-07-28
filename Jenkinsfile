@@ -3,7 +3,7 @@ node {
     stage("Build"){
         
 
-        docker.withRegistry('https://registry.hub.docker.com/', 'DockerHub') {
+        docker.withRegistry('https://registry-1.docker.io/v2/', 'DockerHub') {
 
             def customImage = docker.build("devopsteamseducacionit/sitioweb:${env.BUILD_ID}","./src")
 
