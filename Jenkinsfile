@@ -30,7 +30,7 @@ pipeline {
             }
         }
       steps {
-        …
+        sh 'echo Hola Mundo'
       }
     }
   }
