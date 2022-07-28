@@ -1,13 +1,37 @@
 pipeline {
-  agent any
+  agent {
+    kubernetes {
+      yaml '''
+        spec:
+        containers:
+        - name: golang
+            image: golang:1.16.5
+            command:
+            - sleep
+            args:
+            - 99d
+        '''
+    }
+  }
   stages {
-    stage('Deploy Kubernetes') {
+    stage('Run maven') {
         agent {
             kubernetes {
-		yamlFile '/k8s/mongodb/deployment.yaml'
-		yamlFile '/k8s/web/deployment.yaml'
+                yaml '''
+                    spec:
+                    containers:
+                    - name: maven
+                      image: maven:3.8.1-jdk-8
+                      command:
+                      - sleep
+                      args:
+                      - 99d
+                    '''
             }
         }
+      steps {
+        …
+      }
     }
   }
 }
