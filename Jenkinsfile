@@ -5,7 +5,7 @@ node {
 
         docker.withRegistry('https://registry.hub.docker.com/', 'DockerHub') {
 
-            def customImage = docker.build("allwenn/rotten-potatoes:${env.BUILD_ID}","./src")
+            def customImage = docker.build("devopsteamseducacionit/sitioweb:${env.BUILD_ID}","./src")
 
             /* Push the container to the custom Registry */
             customImage.push()
