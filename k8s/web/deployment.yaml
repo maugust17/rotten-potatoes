@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: movies
-          image: allwenn/rotten-potatoes:latest
+          image: devopsteamseducacionit/sitioweb:latest
           ports:
             - containerPort: 5000
           env:
