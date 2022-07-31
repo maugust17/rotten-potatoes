@@ -18,7 +18,7 @@
 			<div class="movie">
 				<figure class="movie-poster"><img src="{{ filme.thumb }}" alt="#"></figure>
 				<div class="movie-title"><a href="{{ url_for('single', oid=filme.id) }}">{{ filme.titulo }}</a></div>
-				<p>{{ filme.resumo }}</p>
+				<p>{{ filme.resumen }}</p>
 			</div>
 			{% endfor %}
 		</div>	
