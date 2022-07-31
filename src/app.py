@@ -28,10 +28,8 @@ app.config['MONGODB_PASSWORD'] = os.getenv("MONGODB_PASSWORD", "mongopwd")
 
 db.init_app(app)  
 
-try:
-    db.validate_collection("pelicula")  # Try to validate a collection
-except pymongo.errors.OpertaionFailure:  # If the collection doesn't exist
-    llenartabla()
+
+llenartabla()
 
 
 
