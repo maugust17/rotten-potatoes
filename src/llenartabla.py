@@ -20,6 +20,7 @@ def llenartabla():
                                 categoria=item_pelicula['categoria'],
                                 elenco=item_pelicula['elenco'],
                                 slide=item_pelicula['slide'],
+                                direccion=item_pelicula['direccion'],
                                 thumb=item_pelicula['thumb'])
                     
                     pelicula.save()
