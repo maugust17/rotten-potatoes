@@ -43,7 +43,7 @@ def index():
 
 @app.route('/review')
 def review():       
-    return render_template('review.html', filmes=Filme.objects)
+    return render_template('review.html', filmes=Pelicula.objects)
 
 @app.route('/joinus')
 def joinus():
@@ -58,9 +58,9 @@ def single(oid):
     if request.method == 'GET':        
         return render_template('single.html', filme = filme)
     else:
-        nome = request.form['nome']
+        nombre = request.form['nome']
         review = request.form['review']  
-        o_review = Review(nome=nome, review=review)        
+        o_review = Review(nombre=nombre, review=review)        
         filme.add_review(o_review)
         filme.save()
         return redirect(url_for('single', oid=oid))

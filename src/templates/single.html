@@ -34,7 +34,7 @@
 						<h2>Novo Review</h2>
 						<div class="contact-form">
 							<form method="post">
-								<input type="text" required class="name" name="nome" placeholder="Nome..."
+								<input type="text" required class="name" name="nome" placeholder="Nombre..."
 									value="{{ request.form['nome'] }}">
 								<textarea class="message" required placeholder="Review..." name="review">
 									{{ request.form['review'] }}
@@ -47,7 +47,7 @@
 				<div class="row">
 					{% for review in filme.reviews %}
 					<div class="col-md-9">
-						<h2 class="section-title">{{review.nome }} - {{ review.data_review.strftime('%d/%m/%Y %H:%M:%S') }}</h2>
+						<h2 class="section-title">{{review.nombre }} - {{ review.data_review.strftime('%d/%m/%Y %H:%M:%S') }}</h2>
 						<p>{{ review.review }}</p>
 					</div>
 					{% endfor %}
