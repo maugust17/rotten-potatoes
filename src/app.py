@@ -36,7 +36,7 @@ llenartabla()
 @app.route('/')
 def index():
 
-    filmes = Filme.objects
+    filmes = Pelicula.objects
     sliders = sorted(filmes, key=lambda x: len(x.reviews), reverse=False)
     sliders = sliders[-3:]
     return render_template('index.html', filmes=filmes, sliders=sliders)
@@ -52,7 +52,7 @@ def joinus():
 @app.route('/single/<string:oid>', methods=['GET','POST'])
 def single(oid):
 
-    filme = Filme.objects.get(id=bson.objectid.ObjectId(oid))
+    filme = Pelicula.objects.get(id=bson.objectid.ObjectId(oid))
     filme.reviews = sorted(filme.reviews, key=lambda x: x.data_review, reverse=True)
 
     if request.method == 'GET':        
