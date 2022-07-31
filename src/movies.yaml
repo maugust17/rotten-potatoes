@@ -16,8 +16,8 @@ peliculas:
     categoria: "Fantasia, Aventura"
     elenco: "Elijah Wood, Sean Astin, Viggo Mortensen"
     direccion: "Peter Jackson"
-    slide: "/imagenesfilme/BANNER-SEÑORDELOSANILLOS.png"
-    thumb: "/imagenesfilme/THUMB-SEÑORDELOSANILLO.png"
+    slide: "/imagenesfilme/BANNER-SENORDELOSANILLOS.png"
+    thumb: "/imagenesfilme/THUMB-SENORDELOSANILLO.png"
 
   - titulo: "STAR TREK"
     resumen: "James Tiberious Kirk (Chris Pine) é um jovem rebelde inconformado com a morte de seu pai. Certo dia, recebe convite para fazer parte da formação de novos cadetes para a Frota Estelar. Uma vez lá conhece Spock (Zachary Quinto), um vulcano que optou por deixar seu planeta porque é metade humano e discordava do preconceito. Durante o treinamento, e também na primeira missão, os dois vivenciam novas experiências provocadas por seus estilos diametralmente opostos. Assim, Spock, o cerebral, e Kirk, o passional, viverão uma grande aventura ao lado de outros tradicionais integrantes da tripulação da U.S.S. Enterprise, a mais avançada nave espacial da época."

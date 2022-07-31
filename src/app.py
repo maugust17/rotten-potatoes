@@ -58,7 +58,7 @@ def single(oid):
     if request.method == 'GET':        
         return render_template('single.html', filme = filme)
     else:
-        nombre = request.form['nome']
+        nombre = request.form['nombre']
         review = request.form['review']  
         o_review = Review(nombre=nombre, review=review)        
         filme.add_review(o_review)
