@@ -8,7 +8,7 @@ def llenartabla():
     n = random.randint(0,5)
     time.sleep(n/10)
     if not len(Pelicula.objects) > 0:
-        with open('movies.yaml',encoding="utf8") as archivo:
+        with open('movies.yaml') as archivo:
             documento = yaml.full_load(archivo)
 
             for item, doc in documento.items():       
