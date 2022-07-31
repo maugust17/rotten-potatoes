@@ -6,7 +6,7 @@ from models.review import Review
 from mongodb import db
 from models.filme import Filme
 import bson
-from popular import popular
+from llenartabla import llenartabla
 from prometheus_flask_exporter import PrometheusMetrics
 from middleware import set_unhealth, set_unready_for_seconds, middleware
 
@@ -28,7 +28,12 @@ app.config['MONGODB_PASSWORD'] = os.getenv("MONGODB_PASSWORD", "mongopwd")
 
 db.init_app(app)  
 
-popular()
+try:
+    db.validate_collection("pelicula")  # Try to validate a collection
+except pymongo.errors.OpertaionFailure:  # If the collection doesn't exist
+    llenartabla()
+
+
 
 @app.route('/')
 def index():

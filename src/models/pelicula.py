@@ -1,15 +1,15 @@
 from mongodb import db
 
-class Filme(db.Document):
+class Pelicula(db.Document):
 
 
     titulo = db.StringField()
-    resumo = db.StringField()
-    duracao = db.StringField()
-    lancamento = db.StringField()
+    resumen = db.StringField()
+    duracion = db.StringField()
+    lanzamiento = db.StringField()
     categoria = db.StringField()
     elenco = db.StringField()
-    direcao = db.StringField()
+    direccion = db.StringField()
     reviews = db.ListField()
     slide = db.StringField()
     thumb = db.StringField()
