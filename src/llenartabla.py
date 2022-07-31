@@ -14,9 +14,9 @@ def llenartabla():
             for item, doc in documento.items():       
                 for item_pelicula in doc:
                     pelicula = Pelicula(titulo=item_pelicula['titulo'],
-                                resumen=item_pelicula['resumo'],
-                                duracion=item_pelicula['duracao'],
-                                lanzamineto=item_pelicula['lancamento'],
+                                resumen=item_pelicula['resumen'],
+                                duracion=item_pelicula['duracion'],
+                                lanzamineto=item_pelicula['lanzamiento'],
                                 categoria=item_pelicula['categoria'],
                                 elenco=item_pelicula['elenco'],
                                 slide=item_pelicula['slide'],

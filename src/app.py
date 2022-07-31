@@ -4,7 +4,7 @@ import os
 from flask_mongoengine import json
 from models.review import Review
 from mongodb import db
-from models.filme import Filme
+from models.pelicula import Pelicula
 import bson
 from llenartabla import llenartabla
 from prometheus_flask_exporter import PrometheusMetrics
