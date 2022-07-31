@@ -16,7 +16,7 @@ def llenartabla():
                     pelicula = Pelicula(titulo=item_pelicula['titulo'],
                                 resumen=item_pelicula['resumen'],
                                 duracion=item_pelicula['duracion'],
-                                lanzamineto=item_pelicula['lanzamiento'],
+                                lanzamiento=item_pelicula['lanzamiento'],
                                 categoria=item_pelicula['categoria'],
                                 elenco=item_pelicula['elenco'],
                                 slide=item_pelicula['slide'],
